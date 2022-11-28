@@ -2,6 +2,10 @@ const rock = document.querySelector("#Rock");
 const scissor = document.querySelector("#Scissor");
 const paper = document.querySelector("#Rock");
 
+const playerScore = 0;
+const computerScore = 0;
+const roundNumber = 0;
+
 rock.addEventListener("click", () => {
 	// make selection for first player
 	let player = "rock";
