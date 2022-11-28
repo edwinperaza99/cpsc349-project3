@@ -32,6 +32,7 @@ scissor.addEventListener("click", () => {
 
 function selectionAI() {
 	// randomize function here
+	let randomNum = Math.floor(Math.random() * 3) + 1;
 	switch (randomNum) {
 		case "0":
 			return "rock";
@@ -44,24 +45,24 @@ function selectionAI() {
 
 function determineWinner(player, computer) {
 	// add code here
-	if (player == computer) {
+	if (player === computer) {
 		//return tie
-	} else if (player == "scissor" && computer == "paper") {
+	} else if (player === "scissor" && computer === "paper") {
 		// return player wins
 		updateScore();
-	} else if (player == "scissor" && computer == "rock") {
+	} else if (player === "scissor" && computer === "rock") {
 		// return computer wins
 		updateScore();
-	} else if (player == "paper" && computer == "scissor") {
+	} else if (player === "paper" && computer === "scissor") {
 		// return computer wins
 		updateScore();
-	} else if (player == "paper" && computer == "rock") {
+	} else if (player === "paper" && computer === "rock") {
 		// return player wins
 		updateScore();
-	} else if (player == "rock" && computer == "paper") {
+	} else if (player === "rock" && computer === "paper") {
 		// return computer wins
 		updateScore();
-	} else if (player == "rock" && computer == "scissor") {
+	} else if (player === "rock" && computer === "scissor") {
 		// return player wins
 		updateScore();
 	}
