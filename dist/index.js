@@ -34,11 +34,12 @@ function selectionAI() {
 	// randomize function here
 	let randomNum = Math.floor(Math.random() * 3) + 1;
 	switch (randomNum) {
-		case "0":
+		//took out quotes
+		case 0:
 			return "rock";
-		case "1":
+		case 1:
 			return "paper";
-		case "2":
+		case 2:
 			return "scissor";
 	}
 }
@@ -47,23 +48,30 @@ function determineWinner(player, computer) {
 	// add code here
 	if (player === computer) {
 		//return tie
+		return "It's a Tie"
 	} else if (player === "scissor" && computer === "paper") {
 		// return player wins
 		updateScore();
+		return "You Won"
 	} else if (player === "scissor" && computer === "rock") {
 		// return computer wins
 		updateScore();
+		return "You Lost"
 	} else if (player === "paper" && computer === "scissor") {
 		// return computer wins
 		updateScore();
+		return "You Lost"
 	} else if (player === "paper" && computer === "rock") {
 		// return player wins
 		updateScore();
+		return "You Won"
 	} else if (player === "rock" && computer === "paper") {
 		// return computer wins
 		updateScore();
+		return "You Lost"
 	} else if (player === "rock" && computer === "scissor") {
 		// return player wins
 		updateScore();
+		return "You Won"
 	}
 }
