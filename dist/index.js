@@ -2,9 +2,9 @@ const rock = document.querySelector("#Rock");
 const scissor = document.querySelector("#Scissor");
 const paper = document.querySelector("#Paper");
 
-const playerScore = 0;
-const computerScore = 0;
-const roundNumber = 0;
+let playerScore = 0;
+let computerScore = 0;
+let roundNumber = 0;
 
 rock.addEventListener("click", () => {
 	// make selection for first player
@@ -14,6 +14,11 @@ rock.addEventListener("click", () => {
 	console.log(computer);
 	let result = determineWinner(player, computer);
 	console.log(result);
+	console.log("player score: ", playerScore);
+	console.log("computer score: ", computerScore);
+	roundNumber++;
+	console.log("We are in round: ", roundNumber);
+	// call update round to display message of round on screen and do roundNumber there too
 	// updateRound();
 });
 
@@ -25,6 +30,10 @@ paper.addEventListener("click", () => {
 	console.log(computer);
 	let result = determineWinner(player, computer);
 	console.log(result);
+	console.log("player score: ", playerScore);
+	console.log("computer score: ", computerScore);
+	roundNumber++;
+	console.log("We are in round: ", roundNumber);
 	// updateRound();
 });
 
@@ -36,6 +45,10 @@ scissor.addEventListener("click", () => {
 	console.log(computer);
 	let result = determineWinner(player, computer);
 	console.log(result);
+	console.log("player score: ", playerScore);
+	console.log("computer score: ", computerScore);
+	roundNumber++;
+	console.log("We are in round: ", roundNumber);
 	// updateRound();
 });
 
@@ -57,30 +70,40 @@ function determineWinner(player, computer) {
 	// add code here
 	if (player === computer) {
 		//return tie
+		// const resultMessage = document.querySelector("#Result");
+		// resultMessage.textContent = "It's a Tie";
 		return "It's a Tie";
-	} else if (player === "scissor" && computer === "paper") {
+	} else if (
+		(player === "scissor" && computer === "paper") ||
+		(player === "paper" && computer === "rock") ||
+		(player === "rock" && computer === "scissor")
+	) {
 		// return player wins
-		// updateScore();
+		updateScore("player");
+		// const resultMessage = document.querySelector("#Result");
+		// resultMessage.textContent = "You Won!";
 		return "You Won";
-	} else if (player === "scissor" && computer === "rock") {
+	} else if (
+		(player === "scissor" && computer === "rock") ||
+		(player === "paper" && computer === "scissor") ||
+		(player === "rock" && computer === "paper")
+	) {
 		// return computer wins
-		// updateScore();
+		updateScore("computer");
+		// const resultMessage = document.querySelector("#Result");
+		// resultMessage.textContent = "You lost :/";
 		return "You Lost";
-	} else if (player === "paper" && computer === "scissor") {
-		// return computer wins
-		// updateScore();
-		return "You Lost";
-	} else if (player === "paper" && computer === "rock") {
-		// return player wins
-		// updateScore();
-		return "You Won";
-	} else if (player === "rock" && computer === "paper") {
-		// return computer wins
-		// updateScore();
-		return "You Lost";
-	} else if (player === "rock" && computer === "scissor") {
-		// return player wins
-		// updateScore();
-		return "You Won";
 	}
+}
+
+function updateScore(winner) {
+	if (winner == "player") {
+		playerScore++;
+	} else if (winner == "computer") {
+		computerScore++;
+	}
+}
+
+function updateStorage() {
+	// add code here to update storage
 }
