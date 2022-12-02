@@ -1,3 +1,11 @@
+// This function will determine if the continue button should appear or not
+function displayContinue() {
+	if (localStorage.getItem("rounds") !== undefined) {
+		// display button
+		// change attribute
+	}
+}
+
 const rock = document.querySelector("#Rock");
 const scissor = document.querySelector("#Scissor");
 const paper = document.querySelector("#Paper");
@@ -97,13 +105,16 @@ function determineWinner(player, computer) {
 }
 
 function updateScore(winner) {
-	if (winner == "player") {
+	if (winner === "player") {
 		playerScore++;
-	} else if (winner == "computer") {
+	} else if (winner === "computer") {
 		computerScore++;
 	}
 }
 
 function updateStorage() {
 	// add code here to update storage
+	localStorage.setItem("playerScore", playerScore);
+	localStorage.setItem("computerScore", computerScore);
+	localStorage.setItem("rounds", roundNumber);
 }
