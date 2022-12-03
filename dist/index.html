@@ -18,15 +18,39 @@
     <nav
       class="flex w-full justify-between border-b border-slate-900 text-sm z-10"
     >
-      <a href="./index.html">
+      <a href="./index.html" class="main-nav">
         <button class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90">
           rockpaperscissors_
         </button>
       </a>
 
-      <a href="#">
+      <a href="#" class="main-nav">
         <button id="team" class="p-4 hover:bg-slate-900/5">team</button>
       </a>
+
+      <div class="game-nav hidden">
+        <p class="p-4 text-neutral-100 bg-slate-900">user</p>
+
+        <div class="flex p-4 gap-3 items-center">
+          <span class="h-3 w-3 bg-slate-400 rounded-full inline-flex"></span>
+          <span class="h-3 w-3 bg-slate-400 rounded-full inline-flex"></span>
+          <span class="h-3 w-3 bg-slate-400 rounded-full inline-flex"></span>
+        </div>
+      </div>
+
+      <button id="exit-btn" class="hidden p-4 hover:bg-slate-900/5">
+        exit game
+      </button>
+
+      <div class="game-nav hidden">
+        <div class="flex p-4 gap-3 items-center">
+          <span class="h-3 w-3 bg-slate-400 rounded-full inline-flex"></span>
+          <span class="h-3 w-3 bg-slate-400 rounded-full inline-flex"></span>
+          <span class="h-3 w-3 bg-slate-400 rounded-full inline-flex"></span>
+        </div>
+
+        <p class="p-4 text-neutral-100 bg-slate-900">comp</p>
+      </div>
     </nav>
 
     <main>
@@ -53,7 +77,7 @@
         </div>
 
         <div class="flex gap-4 z-10">
-          <a href="#">
+          <a href="#" id="gameBtn">
             <button
               class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90"
             >
@@ -61,7 +85,7 @@
             </button>
           </a>
 
-          <a href="#">
+          <a href="#" class="hidden">
             <button class="p-4 hover:bg-slate-900/5">continue</button>
           </a>
         </div>
@@ -72,7 +96,7 @@
       <!-- team -->
       <div
         id="cards"
-        class="flex flex-col m-4 gap-12 h-full justify-center items-center hidden"
+        class="hidden flex-col m-4 gap-12 h-full justify-center items-center"
       >
         <h1 class="text-2xl z-10">group eleven</h1>
 
@@ -80,11 +104,16 @@
 
         <img src="../src/blobs/blob-2.svg" class="absolute w-3/4" />
       </div>
+
+      <!-- game -->
+      <div id="game" class="hidden m-4 h-full justify-center items-center">
+        <img src="../src/blobs/blob-3.svg" class="absolute w-3/4" />
+      </div>
     </main>
 
     <!-- footer -->
     <footer class="flex w-full justify-center text-xs p-3 z-10">
-      <p>a cpsc349 project</p>
+      <p id="footer-txt">a cpsc349 project</p>
     </footer>
 
     <!-- background texture -->

@@ -63,7 +63,7 @@ function createDetails(member) {
   return details;
 }
 
-export function createCards() {
+export default function createCards() {
   for (const member of team) {
     const main = document.getElementById("card-list");
     const container = document.createElement("div");

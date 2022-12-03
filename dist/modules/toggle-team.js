@@ -4,4 +4,5 @@ export default function toggleTeam() {
 
   home.classList.add("hidden");
   cards.classList.remove("hidden");
+  cards.classList.add("flex");
 }
