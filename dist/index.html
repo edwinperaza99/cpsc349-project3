@@ -1,78 +1,96 @@
 <!DOCTYPE html>
 
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>rockpaperscissors_</title>
-		<link rel="stylesheet" href="output.css" />
-		<script src="./index.js" defer></script>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rockpaperscissors_</title>
 
-	<body
-		class="flex flex-col min-h-screen justify-between font-mono text-slate-900 bg-neutral-100"
-	>
-		<nav class="flex w-full justify-between border-b border-slate-900 text-sm">
-			<a href="./index.html">
-				<button class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90">
-					rockpaperscissors_
-				</button>
-			</a>
+    <link rel="stylesheet" href="output.css" />
+    <script type="module" src="index.js" defer></script>
+  </head>
 
-			<div class="flex">
-				<a href="#">
-					<button class="p-4 hover:bg-slate-900/5">about_</button>
-				</a>
+  <body
+    class="flex flex-col min-h-screen justify-between font-mono text-slate-900 bg-neutral-100"
+  >
+    <!-- nav bar -->
+    <nav
+      class="flex w-full justify-between border-b border-slate-900 text-sm z-10"
+    >
+      <a href="./index.html">
+        <button class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90">
+          rockpaperscissors_
+        </button>
+      </a>
 
-				<a
-					href="https://github.com/edwinperaza99/cpsc349-project3"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<button class="p-4 hover:bg-slate-900/5">github_</button>
-				</a>
-			</div>
-		</nav>
+      <a href="#">
+        <button id="team" class="p-4 hover:bg-slate-900/5">team</button>
+      </a>
+    </nav>
 
-		<main class="flex flex-col m-4 gap-12 h-full justify-center items-center">
-			<div
-				class="flex gap-8 py-6 px-12 rounded-lg bg-neutral-100/30 shadow-2xl shadow-slate-900/10"
-			>
-				<img
-					src="../src/emojis/rock.webp"
-					class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
-					id="Rock"
-				/>
-				<img
-					src="../src/emojis/paper.webp"
-					class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
-					id="Paper"
-				/>
-				<img
-					src="../src/emojis/scissors.webp"
-					class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
-					id="Scissor"
-				/>
-			</div>
+    <main>
+      <!-- home -->
+      <div
+        id="home"
+        class="flex flex-col m-4 gap-12 h-full justify-center items-center"
+      >
+        <div
+          class="flex gap-8 py-6 px-12 bg-neutral-100/30 shadow-2xl shadow-slate-900/10 z-10"
+        >
+          <img
+            src="../src/emojis/rock.webp"
+            class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
+          />
+          <img
+            src="../src/emojis/paper.webp"
+            class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
+          />
+          <img
+            src="../src/emojis/scissors.webp"
+            class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
+          />
+        </div>
 
-			<div class="flex gap-4">
-				<a href="#">
-					<button
-						class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90"
-					>
-						newgame_
-					</button>
-				</a>
+        <div class="flex gap-4 z-10">
+          <a href="#">
+            <button
+              class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90"
+            >
+              new game
+            </button>
+          </a>
 
-				<a href="#">
-					<button class="p-4 hover:bg-slate-900/5">continue_</button>
-				</a>
-			</div>
-		</main>
+          <a href="#">
+            <button class="p-4 hover:bg-slate-900/5">continue</button>
+          </a>
+        </div>
 
-		<footer class="flex w-full justify-center text-xs p-3">
-			<p>cpsc349 // mike p. edwin p. danyal n. thien l.</p>
-		</footer>
-	</body>
+        <img src="../src/blobs/blob-1.svg" class="absolute w-3/4" />
+      </div>
+
+      <!-- team -->
+      <div
+        id="cards"
+        class="flex flex-col m-4 gap-12 h-full justify-center items-center hidden"
+      >
+        <h1 class="text-2xl z-10">group eleven</h1>
+
+        <div id="card-list" class="flex gap-8 z-10"></div>
+
+        <img src="../src/blobs/blob-2.svg" class="absolute w-3/4" />
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="flex w-full justify-center text-xs p-3 z-10">
+      <p>a cpsc349 project</p>
+    </footer>
+
+    <!-- background texture -->
+    <img
+      src="../src/noise-2.svg"
+      class="absolute object-cover w-screen max-h-screen mix-blend-soft-light opacity-30"
+    />
+  </body>
 </html>

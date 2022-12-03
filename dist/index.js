@@ -1,3 +1,13 @@
+import toggleTeam from "./modules/toggle-team.js";
+import { createCards } from "./modules/team-cards.js";
+
+const team = document.getElementById("team");
+createCards();
+
+team.addEventListener("click", () => {
+  toggleTeam();
+});
+
 // This function will determine if the continue button should appear or not
 function displayContinue() {
 	if (localStorage.getItem("rounds") !== undefined) {
