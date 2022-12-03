@@ -1,96 +1,130 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rockpaperscissors_</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>rockpaperscissors_</title>
 
-    <link rel="stylesheet" href="output.css" />
-    <script type="module" src="index.js" defer></script>
-  </head>
+		<link rel="stylesheet" href="output.css" />
+		<script type="module" src="index.js" defer></script>
+	</head>
 
-  <body
-    class="flex flex-col min-h-screen justify-between font-mono text-slate-900 bg-neutral-100"
-  >
-    <!-- nav bar -->
-    <nav
-      class="flex w-full justify-between border-b border-slate-900 text-sm z-10"
-    >
-      <a href="./index.html">
-        <button class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90">
-          rockpaperscissors_
-        </button>
-      </a>
+	<body
+		class="flex flex-col min-h-screen justify-between font-mono text-slate-900 bg-neutral-100"
+	>
+		<!-- nav bar -->
+		<nav
+			class="flex w-full justify-between border-b border-slate-900 text-sm z-10"
+		>
+			<a href="./index.html">
+				<button class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90">
+					rockpaperscissors_
+				</button>
+			</a>
 
-      <a href="#">
-        <button id="team" class="p-4 hover:bg-slate-900/5">team</button>
-      </a>
-    </nav>
+			<a href="#">
+				<button id="team" class="p-4 hover:bg-slate-900/5">team</button>
+			</a>
+		</nav>
 
-    <main>
-      <!-- home -->
-      <div
-        id="home"
-        class="flex flex-col m-4 gap-12 h-full justify-center items-center"
-      >
-        <div
-          class="flex gap-8 py-6 px-12 bg-neutral-100/30 shadow-2xl shadow-slate-900/10 z-10"
-        >
-          <img
-            src="../src/emojis/rock.webp"
-            class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
-          />
-          <img
-            src="../src/emojis/paper.webp"
-            class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
-          />
-          <img
-            src="../src/emojis/scissors.webp"
-            class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
-          />
-        </div>
+		<main>
+			<!-- home -->
+			<div
+				id="home"
+				class="flex flex-col m-4 gap-12 h-full justify-center items-center"
+			>
+				<div
+					class="flex gap-8 py-6 px-12 bg-neutral-100/30 shadow-2xl shadow-slate-900/10 z-10"
+				>
+					<img
+						src="../src/emojis/rock.webp"
+						class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
+						alt="Rock"
+						id="Rock"
+					/>
+					<img
+						src="../src/emojis/paper.webp"
+						class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
+						alt="Paper"
+						id="Paper"
+					/>
+					<img
+						src="../src/emojis/scissors.webp"
+						class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
+						alt="Scissor"
+						id="Scissor"
+					/>
+				</div>
+				<!-- add code here for game -->
+				<div
+					class="flex flex-col gap-8 py-6 px-12 bg-neutral-100/30 shadow-2xl shadow-slate-900/10 z-10"
+				>
+					<div class="flex flex-row gap-8 justify-center">
+						<h3>Player</h3>
+						<p>Round 1</p>
+						<h3>Computer</h3>
+					</div>
+					<div class="flex flex-row gap-8">
+						<img
+							src="../src/emojis/rock.webp"
+							class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
+							alt="Player selection"
+						/>
+						<img
+							src="../src/assets/vs.png"
+							class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
+							alt="VS"
+						/>
+						<img
+							src="../src/emojis/paper.webp"
+							class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
+							alt="Computer selection"
+						/>
+					</div>
+				</div>
 
-        <div class="flex gap-4 z-10">
-          <a href="#">
-            <button
-              class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90"
-            >
-              new game
-            </button>
-          </a>
+				<!-- end of game code -->
+				<div class="flex gap-4 z-10">
+					<a href="#">
+						<button
+							class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90"
+						>
+							new game
+						</button>
+					</a>
 
-          <a href="#">
-            <button class="p-4 hover:bg-slate-900/5">continue</button>
-          </a>
-        </div>
+					<a href="#">
+						<button class="p-4 hover:bg-slate-900/5">continue</button>
+					</a>
+				</div>
 
-        <img src="../src/blobs/blob-1.svg" class="absolute w-3/4" />
-      </div>
+				<img src="../src/blobs/blob-1.svg" class="absolute w-3/4" />
+			</div>
 
-      <!-- team -->
-      <div
-        id="cards"
-        class="flex flex-col m-4 gap-12 h-full justify-center items-center hidden"
-      >
-        <h1 class="text-2xl z-10">group eleven</h1>
+			<!-- team -->
+			<div
+				id="cards"
+				class="flex flex-col m-4 gap-12 h-full justify-center items-center hidden"
+			>
+				<h1 class="text-2xl z-10">group eleven</h1>
 
-        <div id="card-list" class="flex gap-8 z-10"></div>
+				<div id="card-list" class="flex gap-8 z-10"></div>
 
-        <img src="../src/blobs/blob-2.svg" class="absolute w-3/4" />
-      </div>
-    </main>
+				<img src="../src/blobs/blob-2.svg" class="absolute w-3/4" />
+			</div>
+		</main>
 
-    <!-- footer -->
-    <footer class="flex w-full justify-center text-xs p-3 z-10">
-      <p>a cpsc349 project</p>
-    </footer>
+		<!-- footer -->
+		<footer class="flex w-full justify-center text-xs p-3 z-10">
+			<p>a cpsc349 project</p>
+		</footer>
 
-    <!-- background texture -->
-    <img
-      src="../src/noise-2.svg"
-      class="absolute object-cover w-screen max-h-screen mix-blend-soft-light opacity-30"
-    />
-  </body>
+		<!-- background texture -->
+		<img
+			src="../src/noise-2.svg"
+			class="absolute object-cover w-screen max-h-screen mix-blend-soft-light opacity-30"
+		/>
+	</body>
 </html>
