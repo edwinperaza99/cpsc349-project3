@@ -53,7 +53,7 @@ function createDetails (member) {
 
   role.textContent = member.role || 'insert role'
 
-  anchor.setAttribute('href', member.repo || '#')
+  anchor.setAttribute('href', member.repo)
   anchor.setAttribute('target', '_blank')
 
   btn.setAttribute(

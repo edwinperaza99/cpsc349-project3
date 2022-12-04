@@ -129,7 +129,7 @@ function resultBar (message) {
   status.textContent = message
 
   if (playerScore === 3 || computerScore === 3) {
-    link.setAttribute('href', '/')
+    link.setAttribute('href', './')
     button.textContent = 'end game'
     window.localStorage.clear()
   } else {
