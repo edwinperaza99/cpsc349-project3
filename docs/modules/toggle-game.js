@@ -94,7 +94,7 @@ function battleground (player, computer) {
   main.classList.add('flex')
 
   playerHand.setAttribute('id', 'player-hand')
-  playerHand.setAttribute('src', `../src/emojis/${player}.webp`)
+  playerHand.setAttribute('src', `./src/emojis/${player}.webp`)
   playerHand.setAttribute(
     'class',
     'h-32 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]'
@@ -107,7 +107,7 @@ function battleground (player, computer) {
   vs.textContent = 'vs.'
 
   computerHand.setAttribute('id', 'computer-hand')
-  computerHand.setAttribute('src', `../src/emojis/${computer}.webp`)
+  computerHand.setAttribute('src', `./src/emojis/${computer}.webp`)
   computerHand.setAttribute(
     'class',
     'h-32 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]'
@@ -129,7 +129,7 @@ function resultBar (message) {
   status.textContent = message
 
   if (playerScore === 3 || computerScore === 3) {
-    link.setAttribute('href', './index.html')
+    link.setAttribute('href', '/')
     button.textContent = 'end game'
     window.localStorage.clear()
   } else {

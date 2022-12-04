@@ -84,10 +84,9 @@ function createCards () {
   }
 }
 
-
 export default function toggleTeam () {
   createCards()
-  
+
   const home = document.getElementById('home')
   const cards = document.getElementById('cards')
 

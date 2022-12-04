@@ -4,7 +4,7 @@ import toggleGame from './modules/toggle-game.js'
 const team = document.getElementById('team')
 team.addEventListener('click', () => toggleTeam())
 
-const game = document.getElementById('gameBtn')
+const game = document.getElementById('game-btn')
 game.addEventListener('click', () => {
   window.localStorage.clear()
   toggleGame()

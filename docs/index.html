@@ -18,7 +18,7 @@
     <nav
       class="flex w-full justify-between border-b border-slate-900 text-sm z-10"
     >
-      <a href="./index.html" class="main-nav">
+      <a href="/" class="main-nav">
         <button class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90">
           rockpaperscissors_
         </button>
@@ -47,7 +47,7 @@
         </div>
       </div>
 
-      <a id="exit-btn" href="./index.html" class="hidden">
+      <a id="exit-btn" href="/" class="hidden">
         <button class="p-4 hover:bg-slate-900/5">exit game</button>
       </a>
 
@@ -81,34 +81,31 @@
           class="flex gap-8 py-6 px-12 bg-neutral-100/30 shadow-2xl shadow-slate-900/10 z-10"
         >
           <img
-            src="../src/emojis/rock.webp"
+            src="./src/emojis/rock.webp"
             class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
           />
           <img
-            src="../src/emojis/paper.webp"
+            src="./src/emojis/paper.webp"
             class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
           />
           <img
-            src="../src/emojis/scissors.webp"
+            src="./src/emojis/scissors.webp"
             class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
           />
         </div>
 
         <div class="flex gap-4 z-10">
-          <a href="#" id="gameBtn">
-            <button
-              class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90"
-            >
-              new game
-            </button>
-          </a>
+          <button
+            id="game-btn"
+            class="p-4 text-neutral-100 bg-slate-900 hover:bg-slate-900/90"
+          >
+            new game
+          </button>
 
-          <a href="#" id="continue-btn" class="hidden">
-            <button class="p-4 hover:bg-slate-900/5">continue</button>
-          </a>
+          <button id="continue-btn" class="hidden p-4 hover:bg-slate-900/5">continue</button>
         </div>
 
-        <img src="../src/blobs/blob-1.svg" class="absolute w-3/4" />
+        <img src="./src/blobs/blob-1.svg" class="absolute w-3/4" />
       </div>
 
       <!-- team -->
@@ -123,7 +120,7 @@
           class="flex flex-wrap justify-center gap-8 z-10"
         ></div>
 
-        <img src="../src/blobs/blob-2.svg" class="absolute w-3/4" />
+        <img src="./src/blobs/blob-2.svg" class="absolute w-3/4" />
       </div>
 
       <!-- game -->
@@ -140,7 +137,7 @@
             class="flex flex-col gap-2 items-center p-4 hover:bg-slate-900/5 choice"
           >
             <img
-              src="../src/emojis/rock.webp"
+              src="./src/emojis/rock.webp"
               class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
             />
             <p>rock</p>
@@ -151,7 +148,7 @@
             class="flex flex-col gap-2 items-center p-4 hover:bg-slate-900/5 choice"
           >
             <img
-              src="../src/emojis/paper.webp"
+              src="./src/emojis/paper.webp"
               class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
             />
             <p>paper</p>
@@ -162,7 +159,7 @@
             class="flex flex-col gap-2 items-center p-4 hover:bg-slate-900/5 choice"
           >
             <img
-              src="../src/emojis/scissors.webp"
+              src="./src/emojis/scissors.webp"
               class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
             />
             <p>scissors</p>
@@ -192,7 +189,7 @@
           </div>
         </div>
 
-        <img src="../src/blobs/blob-3.svg" class="absolute w-3/4" />
+        <img src="./src/blobs/blob-3.svg" class="absolute w-3/4" />
       </div>
     </main>
 
@@ -203,7 +200,7 @@
 
     <!-- background texture -->
     <img
-      src="../src/noise-2.svg"
+      src="./src/noise-2.svg"
       class="absolute object-cover w-screen max-h-screen mix-blend-soft-light opacity-30"
     />
   </body>
