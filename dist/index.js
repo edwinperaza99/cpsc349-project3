@@ -5,7 +5,7 @@ const team = document.getElementById("team");
 createCards();
 
 team.addEventListener("click", () => {
-  toggleTeam();
+	toggleTeam();
 });
 
 // This function will determine if the continue button should appear or not
@@ -30,6 +30,7 @@ rock.addEventListener("click", () => {
 	let player = "rock";
 	let computer = selectionAI();
 	console.log(computer);
+	changeImage(player, computer);
 	let result = determineWinner(player, computer);
 	console.log(result);
 	console.log("player score: ", playerScore);
@@ -46,6 +47,7 @@ paper.addEventListener("click", () => {
 	let player = "paper";
 	let computer = selectionAI();
 	console.log(computer);
+	changeImage(player, computer);
 	let result = determineWinner(player, computer);
 	console.log(result);
 	console.log("player score: ", playerScore);
@@ -61,6 +63,7 @@ scissor.addEventListener("click", () => {
 	let player = "scissor";
 	let computer = selectionAI();
 	console.log(computer);
+	changeImage(player, computer);
 	let result = determineWinner(player, computer);
 	console.log(result);
 	console.log("player score: ", playerScore);
@@ -88,8 +91,9 @@ function determineWinner(player, computer) {
 	// add code here
 	if (player === computer) {
 		//return tie
-		// const resultMessage = document.querySelector("#Result");
-		// resultMessage.textContent = "It's a Tie";
+
+		const won = document.querySelector("#whoWon");
+		won.textContent = "It's a Tie";
 		return "It's a Tie";
 	} else if (
 		(player === "scissor" && computer === "paper") ||
@@ -98,8 +102,9 @@ function determineWinner(player, computer) {
 	) {
 		// return player wins
 		updateScore("player");
-		// const resultMessage = document.querySelector("#Result");
-		// resultMessage.textContent = "You Won!";
+		const won = document.querySelector("#whoWon");
+		won.textContent = "You Won!";
+
 		return "You Won";
 	} else if (
 		(player === "scissor" && computer === "rock") ||
@@ -108,8 +113,9 @@ function determineWinner(player, computer) {
 	) {
 		// return computer wins
 		updateScore("computer");
-		// const resultMessage = document.querySelector("#Result");
-		// resultMessage.textContent = "You lost :/";
+		const won = document.querySelector("#whoWon");
+		won.textContent = "Computer Won!";
+
 		return "You Lost";
 	}
 }
@@ -127,4 +133,31 @@ function updateStorage() {
 	localStorage.setItem("playerScore", playerScore);
 	localStorage.setItem("computerScore", computerScore);
 	localStorage.setItem("rounds", roundNumber);
+}
+
+function changeImage(player, computer) {
+	const firstSelection = document.querySelector("#player_selection");
+	const secondSelection = document.querySelector("#computer_selection");
+	switch (player) {
+		case "rock":
+			firstSelection.src = "../src/emojis/rock.webp";
+			break;
+		case "paper":
+			firstSelection.src = "../src/emojis/paper.webp";
+			break;
+		case "scissor":
+			firstSelection.src = "../src/emojis/scissors.webp";
+			break;
+	}
+	switch (computer) {
+		case "rock":
+			secondSelection.src = "../src/emojis/rock.webp";
+			break;
+		case "paper":
+			secondSelection.src = "../src/emojis/paper.webp";
+			break;
+		case "scissor":
+			secondSelection.src = "../src/emojis/scissors.webp";
+			break;
+	}
 }

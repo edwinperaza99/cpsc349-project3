@@ -59,30 +59,65 @@
 				</div>
 				<!-- add code here for game -->
 				<div
-					class="flex flex-col gap-8 py-6 px-12 bg-neutral-100/30 shadow-2xl shadow-slate-900/10 z-10"
+					class="flex flex-row gap-8 py-6 px-12 bg-neutral-100/30 shadow-2xl shadow-slate-900/10 z-10"
 				>
-					<div class="flex flex-row gap-8 justify-center">
-						<h3>Player</h3>
-						<p>Round 1</p>
-						<h3>Computer</h3>
-					</div>
-					<div class="flex flex-row gap-8">
+					<section class="text-center">
+						<h3 class="py-3">Player</h3>
 						<img
 							src="../src/emojis/rock.webp"
 							class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
 							alt="Player selection"
+							id="player_selection"
 						/>
+					</section>
+					<section class="text-center">
+						<h3 class="py-3">Round 1</h3>
 						<img
 							src="../src/assets/vs.png"
 							class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
 							alt="VS"
 						/>
+					</section>
+					<section class="text-center">
+						<h3 class="py-3">Computer</h3>
 						<img
 							src="../src/emojis/paper.webp"
 							class="h-24 drop-shadow-[0_3px_15px_rgba(214,137,9,0.5)]"
 							alt="Computer selection"
+							id="computer_selection"
 						/>
+					</section>
+				</div>
+				<!-- code for the actual score and winning message -->
+				<div
+					class="flex flex-col gap-8 py-6 px-12 bg-neutral-100/30 shadow-2xl shadow-slate-900/10 z-10 items-center"
+				>
+					<div class="flex flex-row gap-8">
+						<div>
+							<span
+								class="h-3 w-3 bg-slate-400 rounded-full inline-flex"
+							></span>
+							<span
+								class="h-3 w-3 bg-slate-400 rounded-full inline-flex"
+							></span>
+							<span
+								class="h-3 w-3 bg-slate-400 rounded-full inline-flex"
+							></span>
+						</div>
+						<h5>_Score_</h5>
+						<div>
+							<span
+								class="h-3 w-3 bg-slate-400 rounded-full inline-flex"
+							></span>
+							<span
+								class="h-3 w-3 bg-slate-400 rounded-full inline-flex"
+							></span>
+							<span
+								class="h-3 w-3 bg-slate-400 rounded-full inline-flex"
+							></span>
+						</div>
 					</div>
+					<p id="whoWon">Computer won!</p>
 				</div>
 
 				<!-- end of game code -->
