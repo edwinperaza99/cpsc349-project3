@@ -8,6 +8,17 @@ team.addEventListener("click", () => {
 	toggleTeam();
 });
 
+// localStorage.setItem("rounds", "0");
+function displayButtons() {
+	if (
+		localStorage.getItem("rounds") === null ||
+		localStorage.getItem("rounds") === "0"
+	) {
+		document.querySelector("#buttons").classList.add("hidden");
+	}
+}
+displayButtons();
+
 // This function will determine if the continue button should appear or not
 function displayContinue() {
 	if (localStorage.getItem("rounds") !== undefined) {
@@ -26,17 +37,17 @@ let roundNumber = 0;
 
 rock.addEventListener("click", () => {
 	// make selection for first player
-	console.log("rock was selected");
+
 	let player = "rock";
 	let computer = selectionAI();
-	console.log(computer);
+
 	changeImage(player, computer);
 	let result = determineWinner(player, computer);
-	console.log(result);
+
 	console.log("player score: ", playerScore);
 	console.log("computer score: ", computerScore);
 	roundNumber++;
-	console.log("We are in round: ", roundNumber);
+
 	document.getElementById("round_number").textContent = roundNumber;
 	// call update round to display message of round on screen and do roundNumber there too
 	// updateRound();
@@ -44,34 +55,34 @@ rock.addEventListener("click", () => {
 
 paper.addEventListener("click", () => {
 	// make selection for first player
-	console.log("paper was selected");
+
 	let player = "paper";
 	let computer = selectionAI();
-	console.log(computer);
+
 	changeImage(player, computer);
 	let result = determineWinner(player, computer);
-	console.log(result);
+
 	console.log("player score: ", playerScore);
 	console.log("computer score: ", computerScore);
 	roundNumber++;
-	console.log("We are in round: ", roundNumber);
+
 	document.getElementById("round_number").textContent = roundNumber;
 	// updateRound();
 });
 
 scissor.addEventListener("click", () => {
 	// make selection for first player
-	console.log("scissor was selected");
+
 	let player = "scissor";
 	let computer = selectionAI();
-	console.log(computer);
+
 	changeImage(player, computer);
 	let result = determineWinner(player, computer);
-	console.log(result);
+
 	console.log("player score: ", playerScore);
 	console.log("computer score: ", computerScore);
 	roundNumber++;
-	console.log("We are in round: ", roundNumber);
+
 	document.getElementById("round_number").textContent = roundNumber;
 	// updateRound();
 });
@@ -106,7 +117,7 @@ function determineWinner(player, computer) {
 		// return player wins
 		updateScore("player");
 		const won = document.querySelector("#whoWon");
-		won.textContent = "You Won!";
+		won.textContent = "You Won This Round!";
 
 		return "You Won";
 	} else if (
@@ -117,7 +128,7 @@ function determineWinner(player, computer) {
 		// return computer wins
 		updateScore("computer");
 		const won = document.querySelector("#whoWon");
-		won.textContent = "Computer Won!";
+		won.textContent = "Computer Won This Round!";
 
 		return "You Lost";
 	}
