@@ -37,6 +37,7 @@ rock.addEventListener("click", () => {
 	console.log("computer score: ", computerScore);
 	roundNumber++;
 	console.log("We are in round: ", roundNumber);
+	document.getElementById("round_number").textContent = roundNumber;
 	// call update round to display message of round on screen and do roundNumber there too
 	// updateRound();
 });
@@ -54,6 +55,7 @@ paper.addEventListener("click", () => {
 	console.log("computer score: ", computerScore);
 	roundNumber++;
 	console.log("We are in round: ", roundNumber);
+	document.getElementById("round_number").textContent = roundNumber;
 	// updateRound();
 });
 
@@ -70,6 +72,7 @@ scissor.addEventListener("click", () => {
 	console.log("computer score: ", computerScore);
 	roundNumber++;
 	console.log("We are in round: ", roundNumber);
+	document.getElementById("round_number").textContent = roundNumber;
 	// updateRound();
 });
 
