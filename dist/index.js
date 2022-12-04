@@ -15,6 +15,8 @@ function displayButtons() {
 		localStorage.getItem("rounds") === "0"
 	) {
 		document.querySelector("#buttons").classList.add("hidden");
+	} else {
+		document.querySelector("#buttons").classList.remove("hidden");
 	}
 }
 displayButtons();
