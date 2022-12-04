@@ -3,7 +3,8 @@
     "test": "standard && vnu --skip-non-html --Werror *.html",
     "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "dev": "browser-sync start --no-notify --server --startPath /dist/index.html --files '*.html,*.css,*.js'",
-    "start": "npm-run-all --parallel dev tailwind"
+    "start": "npm-run-all --parallel dev tailwind",
+    "lint": "standard --fix"
   },
   "devDependencies": {
     "browser-sync": "^2.27.10",
